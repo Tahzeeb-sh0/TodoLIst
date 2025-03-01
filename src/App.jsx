@@ -78,9 +78,9 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="Container mx-auto w-full sm:w-3/4 md:w-1/2 my-8 h-screen rounded-2xl p-5 bg-violet-100 overflow-y-scroll shadow-xl">
-        <div className="todoAdd sticky">
-          <h2 className="text-xl font-bold">Add a Todo</h2>
+      <div className="Container mx-auto w-full sm:w-3/4  md:w-1/2 my-8 h-screen rounded-2xl p-5 text-center bg-violet-100 overflow-y-scroll shadow-xl scroll-smooth">
+        <div className="todoAdd ">
+          <h2 className="text-xl font-bold text-center my-3 flex justify-center items-center">Manage your tasks</h2>
           <input
             onChange={handleChange}
             value={todo}
@@ -95,7 +95,7 @@ function App() {
           <h1 className="font-bold my-3">Your Todos</h1>
           <div className="Todos">
             {todos.map((todo) => (
-              <div key={todo.id} className="flex flex-col sm:flex-row justify-between p-3 bg-violet-200 rounded-md my-2 drop-shadow-md">
+              <div key={todo.id} className="sm:flex-row justify-between p-3 bg-violet-200 rounded-md my-2 drop-shadow-md">
                 <div className="flex">
                   <input
                     type="checkbox"
@@ -103,7 +103,7 @@ function App() {
                     onChange={handleCheckBox}
                     className="m-3"
                   />
-                  <div className="bg-violet-50 rounded-md overflow-hidden break-words whitespace-normal">
+                  <div className={ `rounded-md overflow-hidden break-words whitespace-normal ${todo.isCompleted?'line-through':''} ` }>
                     {todo.value}
                   </div>
                 </div>

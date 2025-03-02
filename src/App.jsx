@@ -8,7 +8,6 @@ import LocomotiveScroll from 'locomotive-scroll';
 import { v4 as uuidv4 } from 'uuid';
 import { MdDelete } from "react-icons/md";
 import { MdEditDocument } from "react-icons/md";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function App() {
   const [todo, setTodo] = useState("");
@@ -84,6 +83,7 @@ function App() {
           <h2 className="text-xl font-bold text-center my-3 flex justify-center items-center">Manage your tasks</h2>
           <input
             onChange={handleChange}
+            onKeyDown={(e) => {e.key=='Enter'?handleAdd():null}}
             value={todo}
             className="text-sm sm:text-base sm:w-3/4 bg-white rounded-xl w-1xl p-1 drop-shadow-lg"
             type="text"

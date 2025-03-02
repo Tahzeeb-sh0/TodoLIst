@@ -8,6 +8,7 @@ import LocomotiveScroll from 'locomotive-scroll';
 import { v4 as uuidv4 } from 'uuid';
 import { MdDelete } from "react-icons/md";
 import { MdEditDocument } from "react-icons/md";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function App() {
   const [todo, setTodo] = useState("");

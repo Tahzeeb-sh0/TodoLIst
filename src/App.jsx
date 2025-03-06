@@ -78,14 +78,15 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="Container mx-auto w-full sm:w-3/4  md:w-1/2 my-8 h-screen rounded-2xl p-5 text-center bg-violet-100 overflow-y-scroll shadow-xl scroll-smooth">
+      <div className=" mx-auto m-auto sm:w-3/4  md:w-1/2 my-8 h-screen rounded-2xl p-5 text-center bg-violet-100 overflow-y-scroll shadow-xl scroll-smooth">
         <div className="todoAdd ">
           <h2 className="text-xl font-bold text-center my-3 flex justify-center items-center">Manage your tasks</h2>
           <input
             onChange={handleChange}
+            placeholder='Add a new task...'
             onKeyDown={(e) => {e.key=='Enter'?handleAdd():null}}
             value={todo}
-            className="text-sm sm:text-base sm:w-3/4 bg-white rounded-xl w-1xl p-1 drop-shadow-lg"
+            className="text-sm sm:text-base sm:w-3/4 bg-white rounded-xl w-1xl p-2 drop-shadow-lg"
             type="text"
           />
           <button onClick={handleAdd} className="bg-violet-600 drop-shadow-md hover:bg-violet-700 p-3 py-1 rounded-md m-4">
